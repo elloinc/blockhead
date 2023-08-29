@@ -1,5 +1,9 @@
 import _cache from "./cache";
 import { Cache } from "./public";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+
 export * from "./client";
 export * from "./lib";
 function graphql(str) {
