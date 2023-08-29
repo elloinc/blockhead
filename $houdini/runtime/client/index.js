@@ -11,6 +11,10 @@ import {
 import pluginsFromPlugins from "./plugins/injectedPlugins";
 import { DocumentStore as DocumentStore2 } from "./documentStore";
 import { fetch, mutation, query, subscription } from "./plugins";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+
 class HoudiniClient {
   url;
   plugins;
